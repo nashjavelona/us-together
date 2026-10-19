@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  // OPTIONAL standalone API configuration. The current live backend is Site-managed.
+  // Copy to wrangler.backend.jsonc and supply your own Cloudflare D1 database ID.
+  // Use the repository's pinned devDependency: wrangler 4.92.0 (pnpm exec wrangler).
+  "name": "us-together-backend",
+  "main": "server/worker.js",
+  "compatibility_date": "2026-05-15",
+  "workers_dev": true,
+  "vars": {
+    "ENVIRONMENT": "production"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "us-together",
+      // PLACEHOLDER ONLY: replace this all-zero ID with your actual D1 database ID.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "./drizzle"
+    }
+  ]
+  // CORS is enforced in server/api.js, not through a config wildcard:
+  // https://momentum-my-second-brain.void-mag-inv-5623.chatgpt.site
+  // https://nashjavelona.github.io
+  // Localhost/127.0.0.1 origins are allowed only for a local API or development mode.
+  // Add an exact new frontend origin in server/api.js before using a different host.
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="us-together-build" content="4.1.2-professional-qa">
+  <meta name="theme-color" content="#f8f5ef">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://momentum-my-second-brain.void-mag-inv-5623.chatgpt.site; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="description" content="A little you. A little me. A lot of us. Your couple space for personal plans, shared focus, little wins, and showing up for each other.">
+  <title>Us, Together — A little more us.</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to our space</a>
+  <header class="top">
+    <a href="#app" data-view="home" class="brand" aria-label="Us, Together · Our space">
+      <span class="brand-symbol" aria-hidden="true">u<span>♡</span></span>
+      <span>us, together<small>A LITTLE MORE US.</small></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <button data-view="home">Our space</button>
+      <button data-view="tasks">All tasks</button>
+      <button data-view="inbox" class="nav-mail">For You ♡</button>
+      <button data-view="wins">Little wins</button>
+    </nav>
+    <div class="header-actions"><button class="cloud-button" data-cloud="open" aria-label="Connection and shared space"><span aria-hidden="true">♡</span><span id="cloud-label">Connect us</span></button><button class="settings" data-action="settings" aria-label="Personalize your space">⚙</button></div>
+  </header>
+  <main id="app" tabindex="-1"></main>
+  <footer><button id="storage" class="storage-status" data-cloud="open" aria-live="polite">Saved on this device</button><span>MADE FOR TWO. ONE DAY AT A TIME.</span></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <div id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <input type="file" id="restore" accept="application/json" aria-label="Choose an Us, Together backup" hidden>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
